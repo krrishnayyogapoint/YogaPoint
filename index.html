@@ -1,6 +1,2354 @@
-<html>
-  <head></head>
-  <body style="background-color:red;" >
-    <center> <p1>Krishna Yoga Point</p1> </center>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krrishnay Yoga Point - Transform Your Life Through Yoga</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4a7c59;
+            --primary-light: #6d8c74;
+            --secondary: #f8f4e3;
+            --accent: #d4b483;
+            --text: #333333;
+            --light-text: #f8f8f8;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: var(--secondary);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            color: var(--primary);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary);
+            color: var(--light-text);
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header-scrolled {
+            padding: 15px 0;
+            background-color: rgba(255, 255, 255, 0.98);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-item {
+            margin-left: 35px;
+        }
+
+        .nav-link {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--primary);
+            margin: 5px 0;
+            transition: var(--transition);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(74, 124, 89, 0.7), rgba(74, 124, 89, 0.7)), url('https://placehold.co/1920x1080') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            color: var(--light-text);
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* About Section */
+        .about {
+            background-color: white;
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
+        .about-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .about-content p {
+            margin-bottom: 15px;
+        }
+
+        /* Classes Section */
+        .classes {
+            background-color: var(--secondary);
+        }
+
+        .classes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .class-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .class-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .class-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .class-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .class-card:hover .class-image img {
+            transform: scale(1.05);
+        }
+
+        .class-details {
+            padding: 25px;
+        }
+
+        .class-details h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .class-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .class-desc {
+            margin-bottom: 20px;
+        }
+
+        /* Instructors Section */
+        .instructors {
+            background-color: white;
+        }
+
+        .instructors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .instructor-card {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 10px;
+            background-color: var(--secondary);
+            transition: var(--transition);
+        }
+
+        .instructor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .instructor-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .instructor-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .instructor-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+
+        .instructor-info p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-bottom: 15px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: white;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--secondary);
+        }
+
+        .testimonials-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonial-item {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            display: none;
+        }
+
+        .testimonial-item.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .testimonial-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 3px solid var(--accent);
+        }
+
+        .testimonial-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .testimonial-text::before,
+        .testimonial-text::after {
+            content: '"';
+            font-size: 2rem;
+            color: var(--accent);
+            opacity: 0.3;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .testimonial-role {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ccc;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .slider-dot.active {
+            background-color: var(--primary);
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: white;
+        }
+
+        .contact-container {
+            display: flex;
+            gap: 50px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--primary);
+        }
+
+        .contact-form {
+            flex: 1;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(74, 124, 89, 0.2);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary-light);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-container,
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 40px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 40px 0;
+                transition: var(--transition);
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-item {
+                margin: 15px 0;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+        }
+
+        @media (max-width: 576px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">Krrishnay<span>Yoga</span></a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#classes" class="nav-link">Classes</a></li>
+                <li class="nav-item"><a href="#instructors" class="nav-link">Instructors</a></li>
+                <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Transform Your Life With Yoga</h1>
+            <p>Join Krrishnay Yoga Point to experience holistic wellness through authentic yoga practices in a serene environment tailored for all levels.</p>
+            <a href="#classes" class="btn">Explore Classes</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="https://placehold.co/600x400" alt="Peaceful yoga studio with warm wooden floors, large windows looking out to nature, and yoga mats arranged in semi-circle">
+                </div>
+                <div class="about-content">
+                    <h2>Welcome to Krrishnay Yoga Point</h2>
+                    <p>Founded in 2015, Krrishnay Yoga Point has been dedicated to spreading awareness about the transformative power of yoga in modern lifestyles. Our center is more than just a place to practice yoga - it's a community that nurtures physical, mental, and spiritual growth.</p>
+                    <p>Our mission is to make authentic yoga accessible to everyone, regardless of age, experience level, or background. We combine traditional yogic wisdom with contemporary teaching methods to create a balanced approach to wellness.</p>
+                    <p>The name "Krrishnay" represents the cosmic consciousness and infinite potential within each individual - a philosophy that guides all our teachings.</p>
+                    <a href="#classes" class="btn">Discover Our Classes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classes Section -->
+    <section class="classes" id="classes">
+        <div class="container">
+            <h2 class="section-title">Our Classes</h2>
+            <div class="classes-grid">
+                <!-- Class 1 -->
+                <div class="class-card">
+                    <div class="class-image">
+                        <img src="https://placehold.co/600x400" alt="Group of people practicing Hatha Yoga in morning sunlight with instructor guiding">
+                    </div>
+                    <div class="class-details">
+                        <h3>Hatha Yoga</h3>
+                        <div class="class-meta">
+                            <span>Beginner - Intermediate</span>
+                            <span>Mon, Wed, Fri</span>
+                        </div>
+                        <p class="class-desc">Traditional yoga asanas (postures) paired with pranayama (breathing techniques) to build strength, flexibility, and mental focus.</p>
+                        <a href="#contact" class="btn">Join Now</a>
+                    </div>
+                </div>
+                
+                <!-- Class 2 -->
+                <div class="class-card">
+                    <div class="class-image">
+                        <img src="https://placehold.co/600x400" alt="Dynamic Vinyasa flow sequence in studio with soft lighting focused on smooth movement">
+                    </div>
+                    <div class="class-details">
+                        <h3>Vinyasa Flow</h3>
+                        <div class="class-meta">
+                            <span>All Levels</span>
+                            <span>Tue, Thu, Sat</span>
+                        </div>
+                        <p class="class-desc">Fluid sequences connecting breath with movement to build heat, increase mobility, and cultivate mindfulness.</p>
+                        <a href="#contact" class="btn">Join Now</a>
+                    </div>
+                </div>
+                
+                <!-- Class 3 -->
+                <div class="class-card">
+                    <div class="class-image">
+                        <img src="https://placehold.co/600x400" alt="Gentle Yin Yoga session with props supporting deep stretching and relaxation">
+                    </div>
+                    <div class="class-details">
+                        <h3>Yin & Restorative</h3>
+                        <div class="class-meta">
+                            <span>All Levels</span>
+                            <span>Sun, Tue, Fri</span>
+                        </div>
+                        <p class="class-desc">Passive floor-based poses held for longer durations to target connective tissues and promote deep relaxation.</p>
+                        <a href="#contact" class="btn">Join Now</a>
+                    </div>
+                </div>
+                
+                <!-- Class 4 -->
+                <div class="class-card">
+                    <div class="class-image">
+                        <img src="https://placehold.co/600x400" alt="Senior practitioner smiling during chair yoga class adapted for special needs">
+                    </div>
+                    <div class="class-details">
+                        <h3>Special Needs Yoga</h3>
+                        <div class="class-meta">
+                            <span>Adapted Classes</span>
+                            <span>Wed, Sat</span>
+                        </div>
+                        <p class="class-desc">Tailored sessions for seniors, pregnancy, injuries, and other special conditions with personalized modifications.</p>
+                        <a href="#contact" class="btn">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructors Section -->
+    <section class="instructors" id="instructors">
+        <div class="container">
+            <h2 class="section-title">Meet Our Instructors</h2>
+            <div class="instructors-grid">
+                <!-- Instructor 1 -->
+                <div class="instructor-card">
+                    <div class="instructor-img">
+                        <img src="https://placehold.co/300x300" alt="Professional female yoga instructor meditating in lotus pose outdoors at sunrise">
+                    </div>
+                    <div class="instructor-info">
+                        <h3>Priya Sharma</h3>
+                        <p>Hatha & Yin Yoga Specialist</p>
+                        <p>500+ hour certified instructor with 12 years experience studying in Rishikesh and Mysore.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Instructor 2 -->
+                <div class="instructor-card">
+                    <div class="instructor-img">
+                        <img src="https://placehold.co/300x300" alt="Male yoga instructor demonstrating advanced arm balance with perfect form">
+                    </div>
+                    <div class="instructor-info">
+                        <h3>Arjun Patel</h3>
+                        <p>Vinyasa & Ashtanga Expert</p>
+                        <p>International teacher bringing dynamic sequencing influenced by martial arts and modern dance.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Instructor 3 -->
+                <div class="instructor-card">
+                    <div class="instructor-img">
+                        <img src="https://placehold.co/300x300" alt="Senior yoga guru smiling warmly with hands in prayer position surrounded by nature">
+                    </div>
+                    <div class="instructor-info">
+                        <h3>Guru Mahesh</h3>
+                        <p>Philosophy & Pranayama</p>
+                        <p>30+ years experience teaching the spiritual foundations and healing aspects of yoga.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Instructor 4 -->
+                <div class="instructor-card">
+                    <div class="instructor-img">
+                        <img src="https://placehold.co/300x300" alt="Young adaptive yoga specialist assisting student with modified posture">
+                    </div>
+                    <div class="instructor-info">
+                        <h3>Neha Kapoor</h3>
+                        <p>Therapeutic & Adaptive Yoga</p>
+                        <p>Trained in yoga therapy for injuries, chronic conditions, and special populations.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Students Say</h2>
+            <div class="testimonials-slider">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-item active">
+                    <div class="testimonial-img">
+                        <img src="https://placehold.co/300x300" alt="Happy middle-aged female student smiling after yoga class holding water bottle">
+                    </div>
+                    <p class="testimonial-text">After just 3 months at Krrishnay Yoga Point, my chronic back pain has reduced by 80%. The instructors' personalized attention and therapeutic approach have changed my life.</p>
+                    <h4 class="testimonial-author">Anita Desai</h4>
+                    <p class="testimonial-role">Student since 2020</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-item">
+                    <div class="testimonial-img">
+                        <img src="https://placehold.co/300x300" alt="Business executive in workout clothes giving thumbs up outside studio">
+                    </div>
+                    <p class="testimonial-text">As a corporate executive with high stress levels, Krrishnay's evening Vinyasa classes help me reset my mind. The teachers have an incredible ability to create space for both challenge and relaxation.</p>
+                    <h4 class="testimonial-author">Rajiv Malhotra</h4>
+                    <p class="testimonial-role">Student since 2018</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-item">
+                    <div class="testimonial-img">
+                        <img src="https://placehold.co/300x300" alt="Senior citizen laughing during chair yoga class with instructor supporting">
+                    </div>
+                    <p class="testimonial-text">At 72, I never thought I could do yoga. The Special Needs program adapted everything perfectly for my mobility issues. Now I practice daily and feel stronger than I have in decades!</p>
+                    <h4 class="testimonial-author">Lakshmi Iyer</h4>
+                    <p class="testimonial-role">Student since 2021</p>
+                </div>
+            </div>
+            
+            <div class="slider-nav">
+                <div class="slider-dot active" data-index="0"></div>
+                <div class="slider-dot" data-index="1"></div>
+                <div class="slider-dot" data-index="2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <p>123 Yoga Path, Wellness District<br>Mumbai, Maharashtra 400001</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <p>+91 98765 43210</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <p>info@krrishnayyoga.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <p>Monday - Sunday<br>6:00 AM - 9:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="class">Interested Class</label>
+                            <select id="class" class="form-control">
+                                <option value="">Select a class</option>
+                                <option value="hatha">Hatha Yoga</option>
+                                <option value="vinyasa">Vinyasa Flow</option>
+                                <option value="yin">Yin & Restorative</option>
+                                <option value="special">Special Needs Yoga</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>Krrishnay Yoga</h4>
+                    <p>Providing authentic yoga teachings in Mumbai since 2015. Committed to making yoga accessible for body, mind and spirit.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#classes">Classes</a></li>
+                        <li><a href="#instructors">Instructors</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Classes</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Hatha Yoga</a></li>
+                        <li><a href="#">Vinyasa Flow</a></li>
+                        <li><a href="#">Yin & Restorative</a></li>
+                        <li><a href="#">Special Needs Yoga</a></li>
+                        <li><a href="#">Private Sessions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">123 Yoga Path, Mumbai</a></li>
+                        <li><a href="#">info@krrishnayyoga.com</a></li>
+                        <li><a href="#">+91 98765 43210</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Krrishnay Yoga Point. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(item => {
+            item.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+
+        // Testimonial Slider
+        const testimonialItems = document.querySelectorAll('.testimonial-item');
+        const sliderDots = document.querySelectorAll('.slider-dot');
+        let currentIndex = 0;
+
+        function showTestimonial(index) {
+            testimonialItems.forEach(item => item.classList.remove('active'));
+            sliderDots.forEach(dot => dot.classList.remove('active'));
+            
+            testimonialItems[index].classList.add('active');
+            sliderDots[index].classList.add('active');
+            currentIndex = index;
+        }
+
+        sliderDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showTestimonial(index);
+            });
+        });
+
+        // Auto slide change every 5 seconds
+        setInterval(() => {
+            const nextIndex = (currentIndex + 1) % testimonialItems.length;
+            showTestimonial(nextIndex);
+        }, 5000);
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form Submission
+        const form = document.getElementById('form');
+        
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to a server
+            alert('Thank you for your message! We will contact you shortly.');
+            form.reset();
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krrishnay Yoga Point - Transform Your Life Through Yoga</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4a7c59;
+            --primary-light: #6d8c74;
+            --secondary: #f8f4e3;
+            --accent: #d4b483;
+            --text: #333333;
+            --light-text: #f8f8f8;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: var(--secondary);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            color: var(--primary);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary);
+            color: var(--light-text);
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header-scrolled {
+            padding: 15px 0;
+            background-color: rgba(255, 255, 255, 0.98);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-item {
+            margin-left: 35px;
+        }
+
+        .nav-link {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--primary);
+            margin: 5px 0;
+            transition: var(--transition);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(74, 124, 89, 0.7), rgba(74, 124, 89, 0.7)), url('https://placehold.co/1920x1080') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            color: var(--light-text);
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* About Section */
+        .about {
+            background-color: white;
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
+        .about-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .about-content p {
+            margin-bottom: 15px;
+        }
+
+        /* Classes Section */
+        .classes {
+            background-color: var(--secondary);
+        }
+
+        .classes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .class-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .class-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .class-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .class-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .class-card:hover .class-image img {
+            transform: scale(1.05);
+        }
+
+        .class-details {
+            padding: 25px;
+        }
+
+        .class-details h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .class-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .class-desc {
+            margin-bottom: 20px;
+        }
+
+        /* Instructors Section */
+        .instructors {
+            background-color: white;
+        }
+
+        .instructors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .instructor-card {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 10px;
+            background-color: var(--secondary);
+            transition: var(--transition);
+        }
+
+        .instructor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .instructor-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .instructor-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .instructor-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+
+        .instructor-info p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-bottom: 15px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: white;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--secondary);
+        }
+
+        .testimonials-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonial-item {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            display: none;
+        }
+
+        .testimonial-item.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .testimonial-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 3px solid var(--accent);
+        }
+
+        .testimonial-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .testimonial-text::before,
+        .testimonial-text::after {
+            content: '"';
+            font-size: 2rem;
+            color: var(--accent);
+            opacity: 0.3;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .testimonial-role {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ccc;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .slider-dot.active {
+            background-color: var(--primary);
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: white;
+        }
+
+        .contact-container {
+            display: flex;
+            gap: 50px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--primary);
+        }
+
+        .contact-form {
+            flex: 1;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(74, 124, 89, 0.2);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary-light);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-container,
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 40px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 40px 0;
+                transition: var(--transition);
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-item {
+                margin: 15px 0;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -7px);
+            }
+        }
+
+        @media (max-width: 576px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">Krrishnay<span>Yoga</span></a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#classes" class="nav-link">Classes</a></li>
+                <li class="nav-item"><a href="#instructors" class="nav-link">Instructors</a></li>
+                <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Transform Your Life With Yoga</h1>
+            <p>Join Krrishnay Yoga Point to experience holistic wellness through authentic yoga practices in a serene environment tailored for all levels.</p>
+            <a href="#classes" class="btn">Explore Classes</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="https://placehold.co/600x400" alt="Peaceful yoga studio with warm wooden floors, large windows looking out to nature, and yoga mats arranged in semi-circle">
+                </div>
+                <div class="about-content">
+                    <h2>Welcome to Krrishnay Yoga Point</h2>
+                    <p>Founded in 2015, Krrishnay Yoga Point has been dedicated to spreading awareness about the transformative power of yoga in modern lifestyles. Our center is more than just a place to practice yoga - it's a community that nurtures physical, mental, and spiritual growth.</p>
+                    <p>Our mission is to make authentic yoga accessible to everyone, regardless of age, experience level, or background. We combine traditional yogic wisdom with contemporary teaching methods to create a balanced approach to wellness.</p>
+                    <p>The name "Krrishnay" represents the cosmic consciousness and infinite potential within each individual - a philosophy that guides all our teachings.</p>
+                    <a href="#classes" class="btn">Discover Our Classes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classes Section -->
+    <section class="classes" id="classes">
+        <div class="container">
+            <h2 class="section-title">Our Classes</h2>
+            <div class="classes-grid">
+                <!-- Class 1 -->
+                <div class="class-card">
+                    <div class="class-image">
+                        <img src="https://placehold.co/600x400" alt="Group of people practicing Hatha Yoga in morning sunlight with instructor guiding">
+                    </div>
+                    <div class="class-details">
+                        <h3>Hatha Yoga</h3>
+                        <div class="class-meta">
+                            <span>Beginner - Intermediate</span>
+                            <span>Mon, Wed, Fri</span>
+                        </div>
+                        <p class="class-desc">Traditional yoga asanas (postures) paired with pranayama (breathing techniques) to build strength, flexibility, and mental focus.</p>
+                        <a href="#contact" class="btn">Join Now</a>
+                    </div>
+                </div>
+                
+                <!-- Class 2 -->
+                <div class="class-card">
+                    <div class="class-image">
+                        <img src="https://placehold.co/600x400" alt="Dynamic Vinyasa flow sequence in studio with soft lighting focused on smooth movement">
+                    </div>
+                    <div class="class-details">
+                        <h3>Vinyasa Flow</h3>
+                        <div class="class-meta">
+                            <span>All Levels</span>
+                            <span>Tue, Thu, Sat</span>
+                        </div>
+                        <p class="class-desc">Fluid sequences connecting breath with movement to build heat, increase mobility, and cultivate mindfulness.</p>
+                        <a href="#contact" class="btn">Join Now</a>
+                    </div>
+                </div>
+                
+                <!-- Class 3 -->
+                <div class="class-card">
+                    <div class="class-image">
+                        <img src="https://placehold.co/600x400" alt="Gentle Yin Yoga session with props supporting deep stretching and relaxation">
+                    </div>
+                    <div class="class-details">
+                        <h3>Yin & Restorative</h3>
+                        <div class="class-meta">
+                            <span>All Levels</span>
+                            <span>Sun, Tue, Fri</span>
+                        </div>
+                        <p class="class-desc">Passive floor-based poses held for longer durations to target connective tissues and promote deep relaxation.</p>
+                        <a href="#contact" class="btn">Join Now</a>
+                    </div>
+                </div>
+                
+                <!-- Class 4 -->
+                <div class="class-card">
+                    <div class="class-image">
+                        <img src="https://placehold.co/600x400" alt="Senior practitioner smiling during chair yoga class adapted for special needs">
+                    </div>
+                    <div class="class-details">
+                        <h3>Special Needs Yoga</h3>
+                        <div class="class-meta">
+                            <span>Adapted Classes</span>
+                            <span>Wed, Sat</span>
+                        </div>
+                        <p class="class-desc">Tailored sessions for seniors, pregnancy, injuries, and other special conditions with personalized modifications.</p>
+                        <a href="#contact" class="btn">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructors Section -->
+    <section class="instructors" id="instructors">
+        <div class="container">
+            <h2 class="section-title">Meet Our Instructors</h2>
+            <div class="instructors-grid">
+                <!-- Instructor 1 -->
+                <div class="instructor-card">
+                    <div class="instructor-img">
+                        <img src="https://placehold.co/300x300" alt="Professional female yoga instructor meditating in lotus pose outdoors at sunrise">
+                    </div>
+                    <div class="instructor-info">
+                        <h3>Priya Sharma</h3>
+                        <p>Hatha & Yin Yoga Specialist</p>
+                        <p>500+ hour certified instructor with 12 years experience studying in Rishikesh and Mysore.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Instructor 2 -->
+                <div class="instructor-card">
+                    <div class="instructor-img">
+                        <img src="https://placehold.co/300x300" alt="Male yoga instructor demonstrating advanced arm balance with perfect form">
+                    </div>
+                    <div class="instructor-info">
+                        <h3>Arjun Patel</h3>
+                        <p>Vinyasa & Ashtanga Expert</p>
+                        <p>International teacher bringing dynamic sequencing influenced by martial arts and modern dance.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Instructor 3 -->
+                <div class="instructor-card">
+                    <div class="instructor-img">
+                        <img src="https://placehold.co/300x300" alt="Senior yoga guru smiling warmly with hands in prayer position surrounded by nature">
+                    </div>
+                    <div class="instructor-info">
+                        <h3>Guru Mahesh</h3>
+                        <p>Philosophy & Pranayama</p>
+                        <p>30+ years experience teaching the spiritual foundations and healing aspects of yoga.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Instructor 4 -->
+                <div class="instructor-card">
+                    <div class="instructor-img">
+                        <img src="https://placehold.co/300x300" alt="Young adaptive yoga specialist assisting student with modified posture">
+                    </div>
+                    <div class="instructor-info">
+                        <h3>Neha Kapoor</h3>
+                        <p>Therapeutic & Adaptive Yoga</p>
+                        <p>Trained in yoga therapy for injuries, chronic conditions, and special populations.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Students Say</h2>
+            <div class="testimonials-slider">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-item active">
+                    <div class="testimonial-img">
+                        <img src="https://placehold.co/300x300" alt="Happy middle-aged female student smiling after yoga class holding water bottle">
+                    </div>
+                    <p class="testimonial-text">After just 3 months at Krrishnay Yoga Point, my chronic back pain has reduced by 80%. The instructors' personalized attention and therapeutic approach have changed my life.</p>
+                    <h4 class="testimonial-author">Anita Desai</h4>
+                    <p class="testimonial-role">Student since 2020</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-item">
+                    <div class="testimonial-img">
+                        <img src="https://placehold.co/300x300" alt="Business executive in workout clothes giving thumbs up outside studio">
+                    </div>
+                    <p class="testimonial-text">As a corporate executive with high stress levels, Krrishnay's evening Vinyasa classes help me reset my mind. The teachers have an incredible ability to create space for both challenge and relaxation.</p>
+                    <h4 class="testimonial-author">Rajiv Malhotra</h4>
+                    <p class="testimonial-role">Student since 2018</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-item">
+                    <div class="testimonial-img">
+                        <img src="https://placehold.co/300x300" alt="Senior citizen laughing during chair yoga class with instructor supporting">
+                    </div>
+                    <p class="testimonial-text">At 72, I never thought I could do yoga. The Special Needs program adapted everything perfectly for my mobility issues. Now I practice daily and feel stronger than I have in decades!</p>
+                    <h4 class="testimonial-author">Lakshmi Iyer</h4>
+                    <p class="testimonial-role">Student since 2021</p>
+                </div>
+            </div>
+            
+            <div class="slider-nav">
+                <div class="slider-dot active" data-index="0"></div>
+                <div class="slider-dot" data-index="1"></div>
+                <div class="slider-dot" data-index="2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <p>123 Yoga Path, Wellness District<br>Mumbai, Maharashtra 400001</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <p>+91 98765 43210</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <p>info@krrishnayyoga.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <p>Monday - Sunday<br>6:00 AM - 9:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="class">Interested Class</label>
+                            <select id="class" class="form-control">
+                                <option value="">Select a class</option>
+                                <option value="hatha">Hatha Yoga</option>
+                                <option value="vinyasa">Vinyasa Flow</option>
+                                <option value="yin">Yin & Restorative</option>
+                                <option value="special">Special Needs Yoga</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>Krrishnay Yoga</h4>
+                    <p>Providing authentic yoga teachings in Mumbai since 2015. Committed to making yoga accessible for body, mind and spirit.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#classes">Classes</a></li>
+                        <li><a href="#instructors">Instructors</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Classes</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Hatha Yoga</a></li>
+                        <li><a href="#">Vinyasa Flow</a></li>
+                        <li><a href="#">Yin & Restorative</a></li>
+                        <li><a href="#">Special Needs Yoga</a></li>
+                        <li><a href="#">Private Sessions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">123 Yoga Path, Mumbai</a></li>
+                        <li><a href="#">info@krrishnayyoga.com</a></li>
+                        <li><a href="#">+91 98765 43210</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Krrishnay Yoga Point. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(item => {
+            item.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+
+        // Testimonial Slider
+        const testimonialItems = document.querySelectorAll('.testimonial-item');
+        const sliderDots = document.querySelectorAll('.slider-dot');
+        let currentIndex = 0;
+
+        function showTestimonial(index) {
+            testimonialItems.forEach(item => item.classList.remove('active'));
+            sliderDots.forEach(dot => dot.classList.remove('active'));
+            
+            testimonialItems[index].classList.add('active');
+            sliderDots[index].classList.add('active');
+            currentIndex = index;
+        }
+
+        sliderDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showTestimonial(index);
+            });
+        });
+
+        // Auto slide change every 5 seconds
+        setInterval(() => {
+            const nextIndex = (currentIndex + 1) % testimonialItems.length;
+            showTestimonial(nextIndex);
+        }, 5000);
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form Submission
+        const form = document.getElementById('form');
+        
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to a server
+            alert('Thank you for your message! We will contact you shortly.');
+            form.reset();
+        });
+    </script>
+</body>
 </html>
